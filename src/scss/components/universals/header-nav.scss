@@ -1,0 +1,225 @@
+.header-nav {
+    background-color: var(--color-nav-bg);
+
+    &__container {
+        height: 50px;
+    }
+
+    & ul {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 28px;
+    }
+
+    & ul li {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-shrink: 1;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        & a {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-black-text);
+        }
+    }
+}
+
+/* === Отключаем hover в пункте меню nav текущей страницы ===  */
+.main-page {
+    & .header-nav {
+        & ul li {
+            &:not(.main-page):hover a {
+                color: var(--color-red-text);
+            }
+        }
+    }
+}
+
+.china_lang-page {
+    & .header-nav {
+        & ul li {
+            &:not(.china_lang-page):not(.main-page):hover a {
+                color: var(--color-red-text);
+            }
+        }
+    }
+}
+
+.works_base-page {
+    & .header-nav {
+        & ul li {
+            &:not(.works_base-page):not(.main-page):hover a {
+                color: var(--color-red-text);
+            }
+        }
+    }
+}
+
+.advantages-page {
+    & .header-nav {
+        & ul li {
+            &:not(.advantages-page):not(.main-page):hover a {
+                color: var(--color-red-text);
+            }
+        }
+    }
+}
+
+.pub_contract-page {
+    & .header-nav {
+        & ul li {
+            &:not(.pub_contract-page):not(.main-page):hover a {
+                color: var(--color-red-text);
+            }
+        }
+    }
+}
+
+.payments-page {
+    & .header-nav {
+        & ul li {
+            &:not(.payments-page):not(.main-page):hover a {
+                color: var(--color-red-text);
+            }
+        }
+    }
+}
+
+.contacts-page {
+    & .header-nav {
+        & ul li {
+            &:not(.contacts-page):not(.main-page):hover a {
+                color: var(--color-red-text);
+            }
+        }
+    }
+}
+
+/* --- / Отключаем hover в пункте меню nav текущей страницы ---  */
+
+/* === Закрашиваем красным пункт меню nav текущей страницы ===  */
+/* .main-page {
+    .header-nav ul li.main-page {
+        background-color: var(--color-red-bg);
+
+        &:hover a {
+            opacity: .7;
+        }
+
+        & a {
+            color: var(--color-white-text);
+        }
+    }
+} */
+
+/* Здесь исключаем привязку к главной странице только для первой закладки */
+.header-nav ul li.main-page {
+    background-color: var(--color-red-bg);
+
+    &:hover a {
+        opacity: .7;
+    }
+
+    & a {
+        color: var(--color-white-text);
+    }
+}
+
+.china_lang-page {
+    .header-nav ul li.china_lang-page a {
+        /* background-color: var(--color-red-bg); */
+        color: var(--color-red-text);
+
+        /*         &:hover a {
+            opacity: .7;
+        } */
+
+        /*         & a {
+            color: var(--color-white-text);
+        } */
+    }
+}
+
+.works_base-page {
+    .header-nav ul li.works_base-page a {
+        color: var(--color-red-text);
+    }
+}
+
+.advantages-page {
+    .header-nav ul li.advantages-page a {
+        color: var(--color-red-text);
+    }
+}
+
+.pub_contract-page {
+    .header-nav ul li.pub_contract-page a {
+        color: var(--color-red-text);
+    }
+}
+
+.payments-page {
+    .header-nav ul li.payments-page a {
+        color: var(--color-red-text);
+    }
+}
+
+.contacts-page {
+    .header-nav ul li.contacts-page a {
+        color: var(--color-red-text);
+    }
+}
+
+/* --- / Закрашиваем красным пункт меню nav текущей страницы ---  */
+
+@media(max-width: 1543px) {
+    .header-nav {
+        & ul {
+            gap: calc(0px + (28 - 0) * ((100vw - 1200px) / (1543 - 1200)));
+
+            & li {
+                a {
+                    font-size: calc(10px + (16 - 10) * ((100vw - 1000px) / (1543 - 1000)));
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 999px) {
+    .header-nav {
+        & ul {
+            gap: 0;
+
+            & li {
+                padding-left: calc(3px + (16 - 3) * ((100vw - 620px) / (999 - 620)));
+                padding-right: calc(3px + (16 - 3) * ((100vw - 620px) / (999 - 620)));
+
+                a {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .header-nav {
+        & .header-nav__container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+@media(max-width: 619px) {
+    .header-nav {
+        display: none;
+    }
+}

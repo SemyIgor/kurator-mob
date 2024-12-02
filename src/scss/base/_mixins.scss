@@ -1,0 +1,89 @@
+// Шрифты
+
+/* Ислкючение hover-бага на тач-устройствах (button) */
+@mixin media-hover() {
+   @media (hover: hover) {
+      &:hover {
+         @content;
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         @content;
+      }
+   }
+}
+
+/* В структуре Block > a > img для создания дополнительного слоя */
+/* над картинкой и изменения его прозрачности при наведении мыши */
+/* Добавлено исключение залипания hover на мобильных */
+@mixin image-hover {
+   /* position: relative; */
+
+   & a:after {
+      content: "";
+      display: block;
+      background-color: rgba(138, 87, 44, 0.3);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      transition: all 350ms;
+   }
+
+   /*    & a:hover:after {
+      background-color: rgba(138, 87, 44, 0.1);
+   } */
+
+   /* Исправляем hover-баг для мобильных */
+   @media (hover: hover) {
+      & a:hover:after {
+         background-color: rgba(138, 87, 44, 0.1);
+      }
+   }
+
+   @media (hover: none) {
+      & a:active:after {
+         background-color: rgba(138, 87, 44, 0.1);
+      }
+   }
+}
+
+/* То же, что и предыдущий, но с параметрами, определяющими непрозрачность */
+/* opb = opacity before; opa = opacity after */
+@mixin image-hover-params ($opb, $opa) {
+   /* position: relative; */
+
+   & a:after {
+      content: "";
+      display: block;
+      background-color: rgba(138, 87, 44, $opb);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      transition: all 350ms;
+   }
+
+   /*    & a:hover:after {
+      background-color: rgba(138, 87, 44, $opa);
+   } */
+
+   /* Исправляем hover-баг для мобильных */
+   @media (hover: hover) {
+      & a:hover:after {
+         background-color: rgba(138, 87, 44, $opa);
+      }
+   }
+
+   @media (hover: none) {
+      & a:active:after {
+         background-color: rgba(138, 87, 44, $opa);
+      }
+   }
+}

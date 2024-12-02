@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   <meta name=”keywords” contents=”html, course, diploma”>
+   <meta name=”description” content=”Сайт о написании курсовых и дипломных работ”>
+   <title>KURATOR</title>
+
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/normalize-block-model.css">
+   <link rel="stylesheet" href="css/style.css">
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+   <script type="module" src="js/main.js" defer></script>
+</head>
+
+<body class="page__body">
+
+<div class="page-wrapper payments-page">
+
+    <header class="header center">
+    <div class="header__container">
+
+        <div class="socials">
+    <ul>
+        <li><a href="#"><img src="images/main/header/telegram.svg" alt="Telegram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/viber.svg" alt="Viber Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/insta.svg" alt="Instagram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/vk.svg" alt="VK Icon"></a></li>
+    </ul>
+</div>
+
+        <div class="logo">
+            <a href="main.html"><img src="images/main/header/logo.svg" alt="Header Logo"></a>
+        </div>
+
+        <div class="contacts">
+    <a href="#" class="telegram">
+        <img src="images/main/header/telegram_contact.svg" alt="Telegram Icon">
+        <span>Telegram</span>
+    </a>
+    <a href="#" class="viber">
+        <img src="images/main/header/viber_contact.svg" alt="Viber Icon">
+        <span>Viber</span>
+    </a>
+    <a href="#" class="phone">
+        <img src="images/main/header/phone_contact.svg" alt="Phone Icon">
+        <span>+375 (33) 994 32 62</span>
+    </a>
+    <a href="#" class="mail">
+        <img src="images/main/header/mail_contact.svg" alt="Phone Icon">
+        <span>kuratorminsk@mail.ru</span>
+    </a>
+    <div class="clock-line"></div>
+    <div class="clock-img">
+        <img src="images/main/header/clock.svg" alt="Clock">
+    </div>
+    <div class="clock-text">
+        <span>контакт-центр</span>
+    </div>
+    <div class="clock-time">
+        <span>с 8:00 до 22:00</span>
+    </div>
+</div>
+
+
+
+
+        <div class="burger">
+            <button><img src="images/main/header/burger.svg" alt="Burger"></button>
+        </div>
+    </div>
+</header>
+
+    <main class="main center">
+        <!-- Содержит заказ звонка -->
+        <div class="shadow center">
+    <div class="shadow__container">
+
+        <!-- Окно заказа звонка -->
+        <div class="white-bg call-order-window shadow-child display--none">
+            <div class="call-order-form">
+
+                <div class="cross-close">
+                    <img src="images/main/cross_close.svg" alt="Cross Close">
+                </div>
+
+                <div class="title">Заказ звонка</div>
+
+                <div class="line"></div>
+
+                <form action="#" id="question-form" class="question-form">
+                    <label>
+                        <div class="asterisk">*</div>
+                        <input type="text" name="user-name" id="" placeholder="Введите Ваше Имя"
+                            class="question-form__name">
+                    </label>
+                    <label>
+                        <div class="asterisk">*</div>
+                        <input type="tel" name="user-phone" id="" placeholder="+375 (XX) XXX-XX-XX"
+                            class="question-form__phone">
+                    </label>
+                </form>
+
+                <div class="form-result">
+                    <p class="remark">Отправляя форму, вы соглашаетесь с<a href="#">политикой&nbsp; </a>
+                        обработки и
+                        использования
+                        персональных
+                        данных</p>
+                    <button type="submit" form="question-form" class="red-btn no-switch"><span>Задать
+                            вопрос</span><span></span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Окно = Заявка принята = -->
+        <!-- <div class="white-bg shadow-child display--none"> -->
+        <div class="white-bg order-accepted-window shadow-child display--none">
+            <div class="call-order-form">
+
+                <div class="cross-close">
+                    <img src="images/main/cross_close.svg" alt="Cross Close">
+                </div>
+
+                <div class="title">Заявка принята</div>
+
+                <div class="line"></div>
+
+                <div class="message">Мы перезвоним Вам в ближайшее время!</div>
+
+                <div class="checkbox-order-accepted__image">
+                    <img src="images/main/order_accepted_checkbox.svg" alt="Order Accepted Checkbox">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+        <!-- Содержит окно "Cookie" -->
+        <div class="shadow-bottom center">
+    <div class="shadow-bottom__container">
+        <!-- Окно предупреждения о "куки" -->
+        <div class="cookie-window shadow-child display--none">
+            <p class="text">
+                Мы используем файлы cookie. Вы можете <span>настроить cookie-файлы</span>
+                и ознакомиться с нашей политикой использования cookie-файлов.
+            </p>
+            <div class="buttons">
+                <button class="red-btn switch"><span>Принять</span><span>Принять</span></button>
+                <button class="red-border-btn switch"><span>Отказаться</span>
+                    <span>Отказаться</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Содержит окно бургер-меню -->
+        <div class="shadow-top center">
+    <div class="shadow-top__container">
+        <!-- Окно бургер-меню -->
+        <div class="burger-window shadow-child display--none">
+
+            <div class="cross-close">
+                <img src="images/main/cross_close.svg" alt="Cross Close">
+            </div>
+
+            <div class="logo">
+                <a href="#"><img src="images/main/header/logo.svg" alt="Header Logo"></a>
+            </div>
+
+            <div class="socials">
+    <ul>
+        <li><a href="#"><img src="images/main/header/telegram.svg" alt="Telegram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/viber.svg" alt="Viber Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/insta.svg" alt="Instagram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/vk.svg" alt="VK Icon"></a></li>
+    </ul>
+</div>
+
+            <nav class="burger-nav">
+    <ul>
+        <li><a href="main.html">Заказать работу</a></li>
+        <li><a href="china_lang.html">来自中国的学生</a></li>
+        <li><a href="works_base.html">База бесплатных работ</a></li>
+        <li><a href="advantages.html">Наши преимущества</a></li>
+        <li><a href="pub_contract.html">Публичный договор</a></li>
+        <li><a href="payments.html">Способы оплаты</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+</nav>
+
+            <div class="line-top"></div>
+
+            <div class="contacts">
+    <a href="#" class="telegram">
+        <img src="images/main/header/telegram_contact.svg" alt="Telegram Icon">
+        <span>Telegram</span>
+    </a>
+    <a href="#" class="viber">
+        <img src="images/main/header/viber_contact.svg" alt="Viber Icon">
+        <span>Viber</span>
+    </a>
+    <a href="#" class="phone">
+        <img src="images/main/header/phone_contact.svg" alt="Phone Icon">
+        <span>+375 (33) 994 32 62</span>
+    </a>
+    <a href="#" class="mail">
+        <img src="images/main/header/mail_contact.svg" alt="Phone Icon">
+        <span>kuratorminsk@mail.ru</span>
+    </a>
+    <div class="clock-line"></div>
+    <div class="clock-img">
+        <img src="images/main/header/clock.svg" alt="Clock">
+    </div>
+    <div class="clock-text">
+        <span>контакт-центр</span>
+    </div>
+    <div class="clock-time">
+        <span>с 8:00 до 22:00</span>
+    </div>
+</div>
+
+            <div class="line-bottom"></div>
+
+            <div class="clock">
+                <div class="clock-img">
+                    <img src="images/main/header/clock.svg" alt="Clock">
+                </div>
+                <div class="clock-text">
+                    <span>контакт-центр</span>
+                </div>
+                <div class="clock-time">
+                    <span>с 8:00 до 22:00</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Содержит окно формы заказа работ -->
+        <div class="shadow-fade center">
+    <div class="shadow-fade__container">
+
+        <!-- Окно формы заказа работы -->
+        <!-- <div class=" work-order-window shadow-child display--none"> -->
+        <div class="work-order-window shadow-child">
+
+            <div class="cross-close">
+                <img src="images/main/cross_close.svg" alt="Cross Close">
+            </div>
+
+            <h2 class="title">Заказ работы</h2>
+
+            <div class="line"></div>
+
+            <form action="#" class="request-form">
+
+                <label class="work-type drop-down">
+                    <img src="images/main/form/form_checkmark.svg" alt="Form Checkmark" class="form-checkmark">
+                    <span>Вид работы <span class="asterisk">*</span></span>
+
+                    <div class="works-items display--flex">
+                        <span class="works-item thesis">Диссертация</span>
+                        <span class="works-item essay">Эссе</span>
+                        <span class="works-item diploma-thesis">Дипломная работа</span>
+                    </div>
+
+                    <input type="text" name="work-type" id="" placeholder="Выберите работу" class="request-form__type">
+                </label>
+
+                <label class="work-theme">
+                    <span>Тема работы <span class="asterisk">*</span></span>
+                    <input type="text" name="work-theme" id="" placeholder="Тема работы" class="request-form__theme">
+                </label>
+
+                <label class="work-subject">
+                    <span>Предмет</span>
+                    <input type="text" name="work-subject" id="" placeholder="Название предмета"
+                        class="request-form__subject">
+                </label>
+
+                <label for="textarea-id" class="textarea">
+                    <span>Срок и комментарий</span>
+                    <textarea name="user-comment" id="textarea-id" cols="30" rows="" class="request-form__comment"
+                        placeholder="Комментарий"></textarea>
+                </label>
+
+                <label class="user-name">
+                    <span>Имя <span class="asterisk">*</span></span>
+                    <input type="text" name="user-name" id="" placeholder="Ваше имя" class="request-form__name">
+                </label>
+
+                <label class="user-phone">
+                    <span>Телефон <span class="asterisk">*</span></span>
+                    <input type="tel" name="user-phone" id="" placeholder="Ваш телефон" class="request-form__phone">
+                </label>
+
+                <label class="user-email">
+                    <span>E-mail</span>
+                    <input type="email" name="user-email" id="" placeholder="Ваша почта" class="request-form__email">
+                </label>
+
+                <button class="red-border-btn switch"><img src="images/main/form/clip.svg" alt=""><span>Добавить
+                        файл</span>
+                    <span></span></button>
+
+                <button type="submit" class="red-btn switch"><span>Узнать
+                        стоимость</span><span>Заказать</span></button>
+            </form>
+
+            <div class="form-result">
+                <p class="remark">Отправляя форму, вы соглашаетесь с <a href="#"> &nbsp;политикой&nbsp; </a>
+                    обработки и
+                    использования
+                    персональных
+                    данных</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Окно навигации хедера -->
+        <nav class="header-nav center">
+    <div class="header-nav__container">
+        <ul>
+            <li class="main-page"><a href="main.html">Заказать работу</a></li>
+            <li class="china_lang-page"><a href="china_lang.html">来自中国的学生</a></li>
+            <li class="works_base-page"><a href="works_base.html">База бесплатных работ</a></li>
+            <li class="advantages-page"><a href="advantages.html">Наши преимущества</a></li>
+            <li class="pub_contract-page"><a href="pub_contract.html">Публичный договор</a></li>
+            <li class="payments-page"><a href="payments.html">Способы оплаты</a></li>
+            <li class="contacts-page"><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
+
+        <section class="payments center">
+            <div class="payments__container">
+                <h1 class="page-title">Как можно оплатить?</h1>
+                <div class="line"></div>
+
+                <div class="info">
+
+                    <div class="banks">
+                        <h2 class="title title--1"><span>1</span>В любом отделении банка
+                            или почтовой связи</h2>
+
+                        <ul>
+                            <li><span>Получатель платежа: </span>Индивидуальный предприниматель Масленкова Елена
+                                Владимировна 220024, г. Минск, Асаналиева ул., д. 9,
+                                к. 135</li>
+                            <li><span>Наименование банка: </span>ОАО «Сбер Банк», г. Минск, код BPSBBY2X</li>
+                            <li><span>Счет получателя: </span>BY46BPSB30133446810129330000</li>
+                            <li><span>УНП: </span>193800133</li>
+                            <li><span>Вид платежа: </span>За консультационно-образовательные услуги</li>
+                            <li><span>Плательщик: </span>Фамилия Имя Отчество</li>
+                            <li><span>Адрес регистрации</span></li>
+                            <li><span>Сумма для оплаты</span></li>
+                        </ul>
+
+                        <p class="pub-contract">Оплачивая услуги, вы акцептуете публичный договор, с текстом которого
+                            можно
+                            ознакомиться
+                            <a href="#">здесь</a>.
+                        </p>
+                    </div>
+
+                    <div class="erip">
+                        <h2 class="title title--2"><span>2</span>С помощью системы ЕРИП
+                            Выбрать последовательно пункты:</h2>
+
+                        <ul>
+                            <li><span>Система "Расчет" (ЕРИП)<img src="images/payments/erip_logo.png"
+                                        alt="ERIP Logo"></span>
+                            </li>
+                            <li><span>Интернет-магазины /сервисы</span></li>
+                            <li><span>Ввести первую букву - “K”</span></li>
+                            <li><span>Найти kurator.by</span></li>
+                            <li><span>Для оплаты ввести Номер договора</span></li>
+                            <li><span>Ввести сумму платежа (если не указана)</span></li>
+                            <li><span>Проверить корректность информации</span></li>
+                            <li><span>Совершить платеж</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer center">
+    <div class="footer__container">
+        <div class="footer__grid">
+
+            <div class="first__column">
+                <div class="logo">
+                    <a href="main.html"><img src="images/main/footer/logo_footer.svg" alt="Footer Logo"></a>
+                </div>
+
+                <div class="socials">
+    <ul>
+        <li><a href="#"><img src="images/main/header/telegram.svg" alt="Telegram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/viber.svg" alt="Viber Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/insta.svg" alt="Instagram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/vk.svg" alt="VK Icon"></a></li>
+    </ul>
+</div>
+
+                <a href="#" class="phone">
+                    <img src="images/main/footer/phone.svg" alt="Phone Icon">
+                    <span>+375 (33) 994 32 62</span>
+                </a>
+
+                <a href="#" class="mail">
+                    <img src="images/main/footer/mail_footer.svg" alt="Phone Icon">
+                    <span>kuratorminsk@mail.ru</span>
+                </a>
+
+                <div class="ie">
+                    <span>ИП Масленкова Е.В.</span>
+                </div>
+
+                <div class="address">
+                    <span>220024, г.Минск, ул. Асаналиева, 9</span>
+                </div>
+
+                <div class="unp">
+                    <span>УНП 193800133</span>
+                </div>
+
+                <a href="#" class="policy">
+                    <span>Политика конфиденциальности</span>
+                </a>
+            </div>
+
+            <div class="second__column">
+                <ul>
+                    <li><span>Навигация</span></li>
+                    <li><a href="#">Заказать работу</a></li>
+                    <li><a href="#">来自中国的学生</a></li>
+                    <li><a href="#">Наши преимущества</a></li>
+                    <li><a href="#">Публичный договор</a></li>
+                    <li><a href="#">Способы оплаты</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="third__column">
+                <ul>
+                    <li><span>Виды работ</span></li>
+                    <li><a href="#">Дипломная работа</a></li>
+                    <li><a href="#">Курсовая работа</a></li>
+                    <li><a href="#">Отчет по практике</a></li>
+                    <li><a href="#">Диссертация</a></li>
+                    <li><a href="#">Эссе</a></li>
+                    <li class="list-tail"><a href="#">Доклад</a></li>
+                    <li class="list-tail"><a href="#">Реферат</a></li>
+                    <li class="list-tail"><a href="#">Презентация</a></li>
+                    <li class="list-tail"><a href="#">Оформление по ГОСТу</a></li>
+                    <li class="list-tail"><a href="#">Статья</a></li>
+                </ul>
+            </div>
+
+            <div class="fourth__column">
+                <ul>
+                    <li><span style="visibility: hidden;">Виды работ</span></li>
+                    <li><a href="#">Доклад</a></li>
+                    <li><a href="#">Реферат</a></li>
+                    <li><a href="#">Презентация</a></li>
+                    <li><a href="#">Оформление по ГОСТу</a></li>
+                    <li><a href="#">Статья</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__grid--bottom">
+            <a href="#" class="policy">Политика конфиденциальности</a>
+            <a>© 2024 kurator.by</a>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- <script type="module" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+:root {
+    --width-screen-360: 360;
+
+
+    /* Цвет */
+    --color-page-bg: #F5F5F5;
+    --color-header-bg: #ffffff;
+    --color-nav-bg: #EFF5F8;
+    --color-card-bg: #F1EFF0;
+
+    --color-black-text: #2E2E2E;
+    --color-black-title: #1E1D21;
+    --color-black-bg: #0F283E;
+    --color-black-btn-bg: #2E2E2E;
+
+    --color-gray-text: #929292;
+    --color-grey-bg: #F8F7F6;
+
+    --color-white-text: #ffffff;
+    --color-white-bg: #ffffff;
+
+    --color-decorated-text: #7097B0;
+    --color-decorated-text-2: #307ECC;
+    --color-decorated-text-3: #307ECC;
+
+    --color-form-bg: #c8aab9;
+
+    --color-red-bg: #EF172F;
+    --color-red-text: #EF172F;
+
+    --color-grey-txt: #b7b7b7;
+
+    --color-yelow-bg: #EEC739;
+
+    --color-china-text: #990202;
+
+    /* Отступы 1919px - 360px */
+    --margin-40: 40px;
+    --margin-60: 60px;
+
+    --margin-100-30: 100px;
+    --margin-80-30: 80px;
+    --margin-60-30: 60px;
+    --margin-40-30: 40px;
+    --margin-40-25: 40px;
+    --margin-30-20: 30px;
+    --margin-30-15: 30px;
+    --margin-28-24: 28px;
+    --margin-28-20: 28px;
+    --margin-20-10: 20px;
+    --margin-15-10: 15px;
+
+    --padding-60-30: 60px;
+    --padding-40-30: 40px;
+
+    /* Отступы 767px - 360px - литер s */
+    --margin-60s-40: 60px;
+    --margin-60s-30: 60px;
+    --margin-40s-30: 40px;
+    --margin-40s-20: 40px;
+    --margin-20s-15: 20px;
+
+    --padding-30s-20: 30px;
+
+    /* Увеличение - литер g */
+    --margin-30sg-40: 30px;
+    --margin-10sg-15: 10px;
+
+    /* Шрифты */
+    --font-size-52-36: 52px;
+    --font-size-52-26: 52px;
+    --font-size-52-24: 52px;
+    --font-size-48-32: 48px;
+    --font-size-48-28: 48px;
+    --font-size-48-24: 48px;
+    --font-size-48-22: 48px;
+    --font-size-42-24: 42px;
+    --font-size-40-22: 40px;
+    --font-size-40-20: 40px;
+    --font-size-36-26: 36px;
+    --font-size-36-16: 36px;
+    --font-size-33-18: 33px;
+    --font-size-32-22: 32px;
+    --font-size-29-16: 29px;
+    --font-size-28-20: 28px;
+    --font-size-26-18: 26px;
+    --font-size-24-18: 24px;
+    --font-size-24-16: 24px;
+    --font-size-20-16: 20px;
+    --font-size-20-14: 20px;
+    --font-size-18-16: 18px;
+    --font-size-16-14: 16px;
+    --font-size-16-11: 16px;
+}
+
+/* Responsive */
+@media(max-width: 1919px) {
+    :root {
+        --font-size-52-36: calc(36px + (52 - 36) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-52-26: calc(26px + (52 - 26) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-52-24: calc(24px + (52 - 24) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-48-32: calc(32px + (48 - 32) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-48-28: calc(28px + (48 - 28) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-48-24: calc(24px + (48 - 24) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-48-22: calc(22px + (48 - 22) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-42-24: calc(24px + (42 - 24) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-40-22: calc(22px + (40 - 22) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-40-20: calc(20px + (40 - 20) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-36-26: calc(26px + (36 - 26) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-36-16: calc(16px + (36 - 16) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-33-18: calc(18px + (33 - 18) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-32-22: calc(22px + (32 - 22) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-29-16: calc(16px + (29 - 16) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-28-20: calc(20px + (28 - 20) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-26-18: calc(18px + (26 - 18) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-24-18: calc(18px + (24 - 18) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-24-16: calc(16px + (24 - 16) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-20-16: calc(16px + (20 - 16) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-20-14: calc(14px + (20 - 14) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-18-16: calc(16px + (18 - 16) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-16-14: calc(14px + (16 - 14) * ((100vw - 360px) / (1919 - 360)));
+        --font-size-16-11: calc(11px + (16 - 11) * ((100vw - 360px) / (1919 - 360)));
+
+        /* Отступы 1919px - 360px */
+        --margin-100-30: calc(30px + (100 - 30) * ((100vw - 360px) / (1919 - 360)));
+        --margin-80-30: calc(30px + (80 - 30) * ((100vw - 360px) / (1919 - 360)));
+        --margin-60-30: calc(30px + (60 - 30) * ((100vw - 360px) / (1919 - 360)));
+        --margin-40-30: calc(30px + (40 - 30) * ((100vw - 360px) / (1919 - 360)));
+        --margin-40-25: calc(25px + (40 - 25) * ((100vw - 360px) / (1919 - 360)));
+        --margin-30-20: calc(20px + (30 - 20) * ((100vw - 360px) / (1919 - 360)));
+        --margin-30-15: calc(15px + (30 - 15) * ((100vw - 360px) / (1919 - 360)));
+        --margin-28-24: calc(24px + (28 - 24) * ((100vw - 360px) / (1919 - 360)));
+        --margin-28-20: calc(20px + (28 - 20) * ((100vw - 360px) / (1919 - 360)));
+        --margin-20-10: calc(10px + (20 - 10) * ((100vw - 360px) / (1919 - 360)));
+        --margin-15-10: calc(10px + (15 - 10) * ((100vw - 360px) / (1919 - 360)));
+
+
+
+        --padding-60-30: calc(30px + (60 - 30) * ((100vw - 360px) / (1919 - 360)));
+        --padding-40-30: calc(30px + (40 - 30) * ((100vw - 360px) / (1919 - 360)));
+    }
+}
+
+@media(max-width: 767px) {
+    :root {
+
+        /* Отступы 767px - 360px */
+        --margin-60s-40: calc(40px + (60 - 40) * ((100vw - 360px) / (767 - 360)));
+        --margin-60s-30: calc(30px + (60 - 30) * ((100vw - 360px) / (767 - 360)));
+        --margin-40s-30: calc(30px + (40 - 30) * ((100vw - 360px) / (767 - 360)));
+        --margin-40s-20: calc(20px + (40 - 20) * ((100vw - 360px) / (767 - 360)));
+        --margin-20s-15: calc(15px + (20 - 15) * ((100vw - 360px) / (767 - 360)));
+
+
+        --padding-30s-20: calc(20px + (30 - 20) * ((100vw - 360px) / (767 - 360)));
+
+
+        /* Увеличение ! */
+        --margin-30sg-40: calc(40px + (30 - 40) * ((100vw - 360px) / (767 - 360)));
+        --margin-10sg-15: calc(15px + (10 - 15) * ((100vw - 360px) / (767 - 360)));
+    }
+}

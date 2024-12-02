@@ -1,0 +1,80 @@
+@@include('html_parts/universals/head.html')
+
+<div class="page-wrapper payments-page">
+
+    @@include('html_parts/universals/_header.html')
+
+    <main class="main center">
+        <!-- Содержит заказ звонка -->
+        @@include('html_parts/universals/_shadow.html')
+
+        <!-- Содержит окно "Cookie" -->
+        @@include('html_parts/universals/_shadow_bottom.html')
+
+        <!-- Содержит окно бургер-меню -->
+        @@include('html_parts/universals/_shadow_top.html')
+
+        <!-- Содержит окно формы заказа работ -->
+        @@include('html_parts/universals/_shadow_fade.html')
+
+        <!-- Окно навигации хедера -->
+        @@include('html_parts/universals/_nav.html')
+
+        <section class="payments center">
+            <div class="payments__container">
+                <h1 class="page-title">Как можно оплатить?</h1>
+                <div class="line"></div>
+
+                <div class="info">
+
+                    <div class="banks">
+                        <h2 class="title title--1"><span>1</span>В любом отделении банка
+                            или почтовой связи</h2>
+
+                        <ul>
+                            <li><span>Получатель платежа: </span>Индивидуальный предприниматель Масленкова Елена
+                                Владимировна 220024, г. Минск, Асаналиева ул., д. 9,
+                                к. 135</li>
+                            <li><span>Наименование банка: </span>ОАО «Сбер Банк», г. Минск, код BPSBBY2X</li>
+                            <li><span>Счет получателя: </span>BY46BPSB30133446810129330000</li>
+                            <li><span>УНП: </span>193800133</li>
+                            <li><span>Вид платежа: </span>За консультационно-образовательные услуги</li>
+                            <li><span>Плательщик: </span>Фамилия Имя Отчество</li>
+                            <li><span>Адрес регистрации</span></li>
+                            <li><span>Сумма для оплаты</span></li>
+                        </ul>
+
+                        <p class="pub-contract">Оплачивая услуги, вы акцептуете публичный договор, с текстом которого
+                            можно
+                            ознакомиться
+                            <a href="#">здесь</a>.
+                        </p>
+                    </div>
+
+                    <div class="erip">
+                        <h2 class="title title--2"><span>2</span>С помощью системы ЕРИП
+                            Выбрать последовательно пункты:</h2>
+
+                        <ul>
+                            <li><span>Система "Расчет" (ЕРИП)<img src="images/payments/erip_logo.png"
+                                        alt="ERIP Logo"></span>
+                            </li>
+                            <li><span>Интернет-магазины /сервисы</span></li>
+                            <li><span>Ввести первую букву - “K”</span></li>
+                            <li><span>Найти kurator.by</span></li>
+                            <li><span>Для оплаты ввести Номер договора</span></li>
+                            <li><span>Ввести сумму платежа (если не указана)</span></li>
+                            <li><span>Проверить корректность информации</span></li>
+                            <li><span>Совершить платеж</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    @@include('html_parts/universals/_footer.html')
+</div>
+
+@@include('html_parts/universals/foot.html')

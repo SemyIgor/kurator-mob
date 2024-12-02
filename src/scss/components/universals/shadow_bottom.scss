@@ -1,0 +1,102 @@
+.shadow-bottom {
+    position: fixed;
+    transform: translateY(100%);
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 100;
+    transition: transform .5s, background-color .5s;
+
+    & .shadow-bottom__container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &--shown {
+        transform: translateY(0);
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    & .cookie-window {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+
+        align-items: center;
+        width: 100%;
+        padding-top: 65px;
+        padding-bottom: 65px;
+        background-color: var(--color-white-bg);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    & .text {
+        max-width: 573px;
+        justify-self: end;
+        font-size: var(--font-size-16-11);
+        font-weight: 700;
+        color: var(--color-black-text);
+        margin-left: 20px;
+
+        & span {
+            /* font: 700 16px $font-family; */
+            color: var(--color-decorated-text-2);
+        }
+    }
+
+    & .buttons {
+        margin-right: 20px;
+    }
+}
+
+@media(max-width: 1919px) {
+    .shadow-bottom {
+        & .cookie-window {
+            padding-top: calc(20px + (65 - 20) * ((100vw - 360px) / (1919 - 360)));
+            padding-bottom: calc(20px + (65 - 20) * ((100vw - 360px) / (1919 - 360)));
+            gap: calc(20px + (50 - 20) * ((100vw - 360px) / (1919 - 360)));
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .shadow-bottom {
+        & .cookie-window {
+
+            grid-template-columns: 1fr;
+            grid-auto-flow: row;
+            justify-content: center;
+
+        }
+
+        & .text {
+            margin-right: 20px;
+            margin-left: 20px;
+            justify-self: center;
+            text-align: center;
+        }
+
+        & .buttons {
+            min-width: 270px;
+            width: 100%;
+            grid-template-columns: 45% 55%;
+            margin-right: 45px;
+            margin-left: 45px;
+            justify-self: center;
+        }
+
+        & .red-btn {
+            width: calc(119px + (250 - 119) * ((100vw - 360px) / (767 - 360)));
+            justify-self: flex-end;
+        }
+
+        & .red-border-btn {
+            width: calc(140px + (250 - 140) * ((100vw - 360px) / (767 - 360)));
+            justify-self: flex-start
+        }
+    }
+}

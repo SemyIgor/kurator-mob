@@ -1,0 +1,68 @@
+/* Центрирование отдельной секции страницы */
+.center {
+   margin: 0 auto;
+}
+
+/* .center {
+   padding-left: calc(50% - 96.0rem);
+   padding-right: calc(50% - 96.0rem);
+} */
+
+/* Общий стиль для контейнера секции страницы */
+[class*=container]:not(.fancybox__container) {
+   width: 100%;
+   /* max-width: 1860px; */
+   max-width: 1920px;
+   min-width: calc(var(--width-screen-360) * 1px);
+   margin: 0 auto;
+   padding: 0 30px;
+}
+
+/* Делает при наведении блок прозрачным плавно */
+.opacity-hover {
+   transition: opacity 0.3s ease 0s;
+}
+
+.opacity-hover:hover {
+   opacity: 0.75;
+}
+
+/* Делает блок прозрачным */
+.opacity--zero {
+   opacity: 0;
+   pointer-events: none;
+   /* background-color: rgba(255, 255, 255, 0); */
+}
+
+/* Делает блок непрозрачным */
+.opacity--max {
+   opacity: 1;
+   pointer-events: all;
+   /* background-color: rgba(255, 255, 255, 1); */
+}
+
+/* Удаляет блок из DOM */
+.display--none {
+   display: none;
+}
+
+/* Возвращает блок в DOM */
+.display--block {
+   display: block;
+}
+
+/* Возвращает флекс-блок в DOM */
+.display--flex {
+   display: flex;
+}
+
+/* Вся высота страницы */
+.page-wrapper {
+   /* min-height: 100vh; */
+   /*    display: flex;
+   flex-direction: column; */
+}
+
+/* .main {
+   flex: 1 1 auto;
+} */

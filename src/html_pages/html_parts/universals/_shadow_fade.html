@@ -1,0 +1,80 @@
+<div class="shadow-fade center">
+    <div class="shadow-fade__container">
+
+        <!-- Окно формы заказа работы -->
+        <!-- <div class=" work-order-window shadow-child display--none"> -->
+        <div class="work-order-window shadow-child">
+
+            <div class="cross-close">
+                <img src="images/main/cross_close.svg" alt="Cross Close">
+            </div>
+
+            <h2 class="title">Заказ работы</h2>
+
+            <div class="line"></div>
+
+            <form action="#" class="request-form">
+
+                <label class="work-type drop-down">
+                    <img src="images/main/form/form_checkmark.svg" alt="Form Checkmark" class="form-checkmark">
+                    <span>Вид работы <span class="asterisk">*</span></span>
+
+                    <div class="works-items display--flex">
+                        <span class="works-item thesis">Диссертация</span>
+                        <span class="works-item essay">Эссе</span>
+                        <span class="works-item diploma-thesis">Дипломная работа</span>
+                    </div>
+
+                    <input type="text" name="work-type" id="" placeholder="Выберите работу" class="request-form__type">
+                </label>
+
+                <label class="work-theme">
+                    <span>Тема работы <span class="asterisk">*</span></span>
+                    <input type="text" name="work-theme" id="" placeholder="Тема работы" class="request-form__theme">
+                </label>
+
+                <label class="work-subject">
+                    <span>Предмет</span>
+                    <input type="text" name="work-subject" id="" placeholder="Название предмета"
+                        class="request-form__subject">
+                </label>
+
+                <label for="textarea-id" class="textarea">
+                    <span>Срок и комментарий</span>
+                    <textarea name="user-comment" id="textarea-id" cols="30" rows="" class="request-form__comment"
+                        placeholder="Комментарий"></textarea>
+                </label>
+
+                <label class="user-name">
+                    <span>Имя <span class="asterisk">*</span></span>
+                    <input type="text" name="user-name" id="" placeholder="Ваше имя" class="request-form__name">
+                </label>
+
+                <label class="user-phone">
+                    <span>Телефон <span class="asterisk">*</span></span>
+                    <input type="tel" name="user-phone" id="" placeholder="Ваш телефон" class="request-form__phone">
+                </label>
+
+                <label class="user-email">
+                    <span>E-mail</span>
+                    <input type="email" name="user-email" id="" placeholder="Ваша почта" class="request-form__email">
+                </label>
+
+                <button class="red-border-btn switch"><img src="images/main/form/clip.svg" alt=""><span>Добавить
+                        файл</span>
+                    <span></span></button>
+
+                <button type="submit" class="red-btn switch"><span>Узнать
+                        стоимость</span><span>Заказать</span></button>
+            </form>
+
+            <div class="form-result">
+                <p class="remark">Отправляя форму, вы соглашаетесь с <a href="#"> &nbsp;политикой&nbsp; </a>
+                    обработки и
+                    использования
+                    персональных
+                    данных</p>
+            </div>
+        </div>
+    </div>
+</div>

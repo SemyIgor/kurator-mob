@@ -1,0 +1,322 @@
+/* Только Тень */
+.shadow {
+    position: fixed;
+    transform: translateX(-100%);
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 100;
+    transition: transform .5s, background-color .5s;
+
+    & .shadow__container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &--shown {
+        transform: translateX(0);
+        background-color: rgba(0, 0, 0, .5);
+    }
+}
+
+/* Окна внутри тени */
+.shadow {
+
+    /* Дополнительный экран для прозрачного фонового изображения */
+    /* Отодвигаем его за псевдоэлемент с фоновым изображением */
+    & .white-bg {
+        width: fit-content;
+        max-width: calc(100% - 40px);
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: var(--color-white-bg);
+        left: 50%;
+        transform: translate(-50%, 230px);
+    }
+
+    & .call-order-form {
+        max-width: 650px;
+        position: relative;
+        padding: 60px;
+
+
+        /* Фоновое изображение на псевдоэлемент и отодвигаем его за контент */
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            background-image: url('../images/main/call_order_form_bg.png');
+
+            /* Картинка с прозрачностью 0.6 */
+            /* background-image: url('../../../images/main/call_order_form_bg_opacity_06.png'); */
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: screen;
+            opacity: 0.6;
+        }
+    }
+
+    & .cross-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    & .title {
+        font-size: var(--font-size-48-24);
+        font-weight: 700;
+        color: var(--color-black-text);
+        margin-bottom: 8px;
+    }
+
+    & .line {
+        border: 1px solid var(--color-decorated-text);
+        background-color: var(--color-decorated-text);
+        width: 150px;
+        height: 3px;
+        margin-bottom: 30px;
+    }
+
+    & .question-form {
+        display: grid;
+        grid-template-columns: 250px 250px;
+        gap: 30px;
+        margin-bottom: 32px;
+
+        /* Позиционируем asterisk относительно label */
+        & label {
+            position: relative;
+        }
+
+        /* Абсолютное позиционирование asterisk-а */
+        & .asterisk {
+            position: absolute;
+            top: 10px;
+            left: 170px;
+            z-index: 10;
+            color: var(--color-red-text);
+            font-size: 16px;
+
+        }
+
+        /* Если внутри label-а input в фокусе, то asterisk скрываем */
+        & label:has(input:focus) .asterisk {
+            display: none;
+        }
+
+        & input {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: relative;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--color-black-text);
+
+            border: 1px solid var(--color-gray-text);
+            border-radius: 8px;
+            width: 250px;
+            height: 50px;
+
+            &::placeholder {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 16px;
+                font-weight: 400;
+                color: var(--color-gray-text);
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+
+        &__name,
+        &__phone {
+            width: 100%;
+            height: 50px;
+            border-radius: 8px;
+            border: none;
+        }
+    }
+
+    .form-result {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .remark {
+        color: #2e2e2e;
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-black-text);
+
+        & a {
+            color: var(--color-decorated-text-2);
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .red-btn.no-switch {
+        height: 50px;
+        border-radius: 54px;
+        justify-self: end;
+        margin-bottom: 4px;
+    }
+}
+
+.order-accepted-window {
+    & .call-order-form {
+        padding-right: 55px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .message {
+        font-size: var(--font-size-24-18);
+        font-weight: 700;
+        color: var(--color-black-text);
+        margin-bottom: 30px;
+    }
+
+    & .checkbox-order-accepted__image {
+        align-self: center;
+    }
+
+}
+
+@media(max-width: 1199px) {
+    .shadow {
+        & .white-bg {
+            transform: translate(-50%, calc(70px + (230 - 70) * ((100vw - 360px) / (1199 - 360))));
+        }
+    }
+}
+
+@media(max-width: 689px) {
+    .shadow {
+        & .white-bg {
+            max-width: 100%;
+        }
+
+        & .call-order-form {
+            padding-left: calc(30px + (60 - 30) * ((100vw - 590px) / (689 - 590)));
+            padding-right: calc(30px + (60 - 30) * ((100vw - 590px) / (689 - 590)));
+            padding-top: calc(30px + (60 - 30) * ((100vw - 590px) / (689 - 590)));
+            padding-bottom: calc(30px + (60 - 30) * ((100vw - 590px) / (689 - 590)));
+        }
+
+        & .question-form {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 32px;
+
+            & input {
+                width: 100%;
+            }
+        }
+
+        & .form-result {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            gap: 30px;
+        }
+
+        .red-btn.no-switch {
+            width: 250px;
+        }
+    }
+
+    .order-accepted-window {
+        & .call-order-form {
+            padding-top: 60px;
+            padding-bottom: calc(50px + (40 - 50) * ((100vw - 360px) / (689 - 360)));
+
+        }
+    }
+}
+
+@media(max-width: 589px) {
+    .shadow {
+        & .call-order-form {
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    .order-accepted-window {
+        & .call-order-form {
+            padding-top: 60px;
+            padding-bottom: 50px;
+
+        }
+    }
+}
+
+@media(max-width: 489px) {
+    .shadow {
+        & .call-order-form {
+            padding-left: calc(20px + (30 - 20) * ((100vw - 360px) / (489 - 360)));
+            padding-right: calc(20px + (30 - 20) * ((100vw - 360px) / (489 - 360)));
+            padding-top: calc(60px + (30 - 60) * ((100vw - 360px) / (489 - 360)));
+            padding-bottom: calc(60px + (30 - 60) * ((100vw - 360px) / (489 - 360)));
+        }
+
+        & .line {
+            margin-bottom: calc(20px + (30 - 20) * ((100vw - 360px) / (489 - 360)));
+        }
+
+        & .question-form {
+            grid-template-columns: 320px;
+            gap: calc(15px + (30 - 15) * ((100vw - 360px) / (489 - 360)));
+            margin-bottom: calc(10px + (32 - 10) * ((100vw - 360px) / (489 - 360)));
+
+            input {
+                height: calc(40px + (50 - 40) * ((100vw - 360px) / (489 - 360)));
+            }
+        }
+
+        & .form-result {
+            gap: calc(40px + (30 - 40) * ((100vw - 360px) / (489 - 360)));
+        }
+
+        .red-btn.no-switch {
+            justify-self: center;
+            width: calc(181px + (250 - 181) * ((100vw - 360px) / (489 - 360)));
+            height: calc(40px + (50 - 40) * ((100vw - 360px) / (489 - 360)));
+        }
+    }
+
+    .order-accepted-window {
+        & .call-order-form {
+            padding-top: 60px;
+            padding-bottom: 50px;
+            align-items: center;
+
+        }
+
+        & .title {
+            margin-bottom: calc(15px + (8 - 15) * ((100vw - 360px) / (489 - 360)));
+        }
+
+        & .message {
+            text-align: center;
+            margin-bottom: calc(40px + (30 - 40) * ((100vw - 360px) / (489 - 360)));
+        }
+    }
+}

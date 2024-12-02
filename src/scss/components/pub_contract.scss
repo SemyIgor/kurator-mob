@@ -1,0 +1,53 @@
+.pub-contract {
+    & .pub-contract__container {
+        padding-bottom: var(--margin-100-30);
+    }
+
+    & .page-title {
+        font-size: var(--font-size-52-26);
+        font-weight: 700;
+        line-height: 120%;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--color-black-text);
+        margin-top: var(--margin-60-30);
+        margin-bottom: 15px;
+    }
+
+    & .line {
+        border: 1px solid var(--color-decorated-text);
+        background-color: var(--color-decorated-text);
+        width: 150px;
+        height: 3px;
+        margin: 0 auto;
+        margin-bottom: var(--margin-80-30);
+    }
+
+    & .subtitle {
+        font-weight: 700;
+        line-height: 120%;
+        font-size: var(--font-size-20-14);
+        color: var(--color-black-text);
+        margin-bottom: var(--margin-28-20);
+    }
+
+    & .text {
+        font-weight: 400;
+        line-height: 120%;
+        font-size: var(--font-size-20-14);
+        color: var(--color-black-text);
+    }
+
+    & .text+.subtitle {
+        margin-top: var(--font-size-52-36);
+    }
+}
+
+@media(max-width: 767px) {
+    .pub-contract {
+        & .pub-contract__container {
+            padding-left: var(--padding-30s-20);
+            padding-right: var(--padding-30s-20);
+        }
+    }
+}

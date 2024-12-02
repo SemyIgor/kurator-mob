@@ -1,0 +1,129 @@
+/* Chrome, Safari, Edge, Opera */
+/* Убирает стрелочки у числа в input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+*:focus:not(:focus-visible) {
+   outline: none;
+}
+
+html,
+body {
+   font-size: 62.5%;
+   font-family: "Open Sans", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+
+   /* scrollbar-gutter: stable; */
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   /* Для вызова затемнённого меню */
+   position: relative;
+}
+
+body {
+   height: 100%;
+   overflow-x: hidden;
+}
+
+.wrapper {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   overflow-x: hidden;
+   justify-content: space-between;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+   color: #000;
+}
+
+button {
+   cursor: pointer;
+}
+
+label,
+input,
+button,
+textarea {
+
+   &:hover,
+   &:active,
+   &:focus {
+      outline: 0;
+      outline-offset: 0;
+   }
+}
+
+button {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   border: none;
+   outline: 0;
+   box-shadow: none;
+   background: none;
+}
+
+ul {
+   text-decoration: none;
+   list-style: none;
+}
+
+section {
+   margin: 0;
+   padding: 0;
+}
+
+.text-color {
+   color: var(--color-black-text);
+}
+
+.title-color {
+   color: var(--color-black-title);
+}
+
+.cross-close {
+   cursor: pointer;
+}
+
+/* Изменение rem при экранах от 1920px до 360px */
+@media (max-width: 1920px) {
+
+   html,
+   body {
+      font-size: calc(5px + (10 - 5) * ((100vw - 360px) / (1920 - 360)));
+   }
+}
+
+@media(max-width: 767px) {
+   [class*=container]:not(.fancybox__container) {
+      padding: 0 20px;
+   }
+}
