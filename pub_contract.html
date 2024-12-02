@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   <meta name=”keywords” contents=”html, course, diploma”>
+   <meta name=”description” content=”Сайт о написании курсовых и дипломных работ”>
+   <title>KURATOR</title>
+
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/normalize-block-model.css">
+   <link rel="stylesheet" href="css/style.css">
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+   <script type="module" src="js/main.js" defer></script>
+</head>
+
+<body class="page__body">
+
+<div class="page-wrapper pub_contract-page">
+
+    <header class="header center">
+    <div class="header__container">
+
+        <div class="socials">
+    <ul>
+        <li><a href="#"><img src="images/main/header/telegram.svg" alt="Telegram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/viber.svg" alt="Viber Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/insta.svg" alt="Instagram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/vk.svg" alt="VK Icon"></a></li>
+    </ul>
+</div>
+
+        <div class="logo">
+            <a href="main.html"><img src="images/main/header/logo.svg" alt="Header Logo"></a>
+        </div>
+
+        <div class="contacts">
+    <a href="#" class="telegram">
+        <img src="images/main/header/telegram_contact.svg" alt="Telegram Icon">
+        <span>Telegram</span>
+    </a>
+    <a href="#" class="viber">
+        <img src="images/main/header/viber_contact.svg" alt="Viber Icon">
+        <span>Viber</span>
+    </a>
+    <a href="#" class="phone">
+        <img src="images/main/header/phone_contact.svg" alt="Phone Icon">
+        <span>+375 (33) 994 32 62</span>
+    </a>
+    <a href="#" class="mail">
+        <img src="images/main/header/mail_contact.svg" alt="Phone Icon">
+        <span>kuratorminsk@mail.ru</span>
+    </a>
+    <div class="clock-line"></div>
+    <div class="clock-img">
+        <img src="images/main/header/clock.svg" alt="Clock">
+    </div>
+    <div class="clock-text">
+        <span>контакт-центр</span>
+    </div>
+    <div class="clock-time">
+        <span>с 8:00 до 22:00</span>
+    </div>
+</div>
+
+
+
+
+        <div class="burger">
+            <button><img src="images/main/header/burger.svg" alt="Burger"></button>
+        </div>
+    </div>
+</header>
+
+    <main class="main center">
+        <!-- Содержит заказ звонка -->
+        <div class="shadow center">
+    <div class="shadow__container">
+
+        <!-- Окно заказа звонка -->
+        <div class="white-bg call-order-window shadow-child display--none">
+            <div class="call-order-form">
+
+                <div class="cross-close">
+                    <img src="images/main/cross_close.svg" alt="Cross Close">
+                </div>
+
+                <div class="title">Заказ звонка</div>
+
+                <div class="line"></div>
+
+                <form action="#" id="question-form" class="question-form">
+                    <label>
+                        <div class="asterisk">*</div>
+                        <input type="text" name="user-name" id="" placeholder="Введите Ваше Имя"
+                            class="question-form__name">
+                    </label>
+                    <label>
+                        <div class="asterisk">*</div>
+                        <input type="tel" name="user-phone" id="" placeholder="+375 (XX) XXX-XX-XX"
+                            class="question-form__phone">
+                    </label>
+                </form>
+
+                <div class="form-result">
+                    <p class="remark">Отправляя форму, вы соглашаетесь с<a href="#">политикой&nbsp; </a>
+                        обработки и
+                        использования
+                        персональных
+                        данных</p>
+                    <button type="submit" form="question-form" class="red-btn no-switch"><span>Задать
+                            вопрос</span><span></span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Окно = Заявка принята = -->
+        <!-- <div class="white-bg shadow-child display--none"> -->
+        <div class="white-bg order-accepted-window shadow-child display--none">
+            <div class="call-order-form">
+
+                <div class="cross-close">
+                    <img src="images/main/cross_close.svg" alt="Cross Close">
+                </div>
+
+                <div class="title">Заявка принята</div>
+
+                <div class="line"></div>
+
+                <div class="message">Мы перезвоним Вам в ближайшее время!</div>
+
+                <div class="checkbox-order-accepted__image">
+                    <img src="images/main/order_accepted_checkbox.svg" alt="Order Accepted Checkbox">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+        <!-- Содержит окно "Cookie" -->
+        <div class="shadow-bottom center">
+    <div class="shadow-bottom__container">
+        <!-- Окно предупреждения о "куки" -->
+        <div class="cookie-window shadow-child display--none">
+            <p class="text">
+                Мы используем файлы cookie. Вы можете <span>настроить cookie-файлы</span>
+                и ознакомиться с нашей политикой использования cookie-файлов.
+            </p>
+            <div class="buttons">
+                <button class="red-btn switch"><span>Принять</span><span>Принять</span></button>
+                <button class="red-border-btn switch"><span>Отказаться</span>
+                    <span>Отказаться</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Содержит окно бургер-меню -->
+        <div class="shadow-top center">
+    <div class="shadow-top__container">
+        <!-- Окно бургер-меню -->
+        <div class="burger-window shadow-child display--none">
+
+            <div class="cross-close">
+                <img src="images/main/cross_close.svg" alt="Cross Close">
+            </div>
+
+            <div class="logo">
+                <a href="#"><img src="images/main/header/logo.svg" alt="Header Logo"></a>
+            </div>
+
+            <div class="socials">
+    <ul>
+        <li><a href="#"><img src="images/main/header/telegram.svg" alt="Telegram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/viber.svg" alt="Viber Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/insta.svg" alt="Instagram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/vk.svg" alt="VK Icon"></a></li>
+    </ul>
+</div>
+
+            <nav class="burger-nav">
+    <ul>
+        <li><a href="main.html">Заказать работу</a></li>
+        <li><a href="china_lang.html">来自中国的学生</a></li>
+        <li><a href="works_base.html">База бесплатных работ</a></li>
+        <li><a href="advantages.html">Наши преимущества</a></li>
+        <li><a href="pub_contract.html">Публичный договор</a></li>
+        <li><a href="payments.html">Способы оплаты</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+</nav>
+
+            <div class="line-top"></div>
+
+            <div class="contacts">
+    <a href="#" class="telegram">
+        <img src="images/main/header/telegram_contact.svg" alt="Telegram Icon">
+        <span>Telegram</span>
+    </a>
+    <a href="#" class="viber">
+        <img src="images/main/header/viber_contact.svg" alt="Viber Icon">
+        <span>Viber</span>
+    </a>
+    <a href="#" class="phone">
+        <img src="images/main/header/phone_contact.svg" alt="Phone Icon">
+        <span>+375 (33) 994 32 62</span>
+    </a>
+    <a href="#" class="mail">
+        <img src="images/main/header/mail_contact.svg" alt="Phone Icon">
+        <span>kuratorminsk@mail.ru</span>
+    </a>
+    <div class="clock-line"></div>
+    <div class="clock-img">
+        <img src="images/main/header/clock.svg" alt="Clock">
+    </div>
+    <div class="clock-text">
+        <span>контакт-центр</span>
+    </div>
+    <div class="clock-time">
+        <span>с 8:00 до 22:00</span>
+    </div>
+</div>
+
+            <div class="line-bottom"></div>
+
+            <div class="clock">
+                <div class="clock-img">
+                    <img src="images/main/header/clock.svg" alt="Clock">
+                </div>
+                <div class="clock-text">
+                    <span>контакт-центр</span>
+                </div>
+                <div class="clock-time">
+                    <span>с 8:00 до 22:00</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Содержит окно формы заказа работ -->
+        <div class="shadow-fade center">
+    <div class="shadow-fade__container">
+
+        <!-- Окно формы заказа работы -->
+        <!-- <div class=" work-order-window shadow-child display--none"> -->
+        <div class="work-order-window shadow-child">
+
+            <div class="cross-close">
+                <img src="images/main/cross_close.svg" alt="Cross Close">
+            </div>
+
+            <h2 class="title">Заказ работы</h2>
+
+            <div class="line"></div>
+
+            <form action="#" class="request-form">
+
+                <label class="work-type drop-down">
+                    <img src="images/main/form/form_checkmark.svg" alt="Form Checkmark" class="form-checkmark">
+                    <span>Вид работы <span class="asterisk">*</span></span>
+
+                    <div class="works-items display--flex">
+                        <span class="works-item thesis">Диссертация</span>
+                        <span class="works-item essay">Эссе</span>
+                        <span class="works-item diploma-thesis">Дипломная работа</span>
+                    </div>
+
+                    <input type="text" name="work-type" id="" placeholder="Выберите работу" class="request-form__type">
+                </label>
+
+                <label class="work-theme">
+                    <span>Тема работы <span class="asterisk">*</span></span>
+                    <input type="text" name="work-theme" id="" placeholder="Тема работы" class="request-form__theme">
+                </label>
+
+                <label class="work-subject">
+                    <span>Предмет</span>
+                    <input type="text" name="work-subject" id="" placeholder="Название предмета"
+                        class="request-form__subject">
+                </label>
+
+                <label for="textarea-id" class="textarea">
+                    <span>Срок и комментарий</span>
+                    <textarea name="user-comment" id="textarea-id" cols="30" rows="" class="request-form__comment"
+                        placeholder="Комментарий"></textarea>
+                </label>
+
+                <label class="user-name">
+                    <span>Имя <span class="asterisk">*</span></span>
+                    <input type="text" name="user-name" id="" placeholder="Ваше имя" class="request-form__name">
+                </label>
+
+                <label class="user-phone">
+                    <span>Телефон <span class="asterisk">*</span></span>
+                    <input type="tel" name="user-phone" id="" placeholder="Ваш телефон" class="request-form__phone">
+                </label>
+
+                <label class="user-email">
+                    <span>E-mail</span>
+                    <input type="email" name="user-email" id="" placeholder="Ваша почта" class="request-form__email">
+                </label>
+
+                <button class="red-border-btn switch"><img src="images/main/form/clip.svg" alt=""><span>Добавить
+                        файл</span>
+                    <span></span></button>
+
+                <button type="submit" class="red-btn switch"><span>Узнать
+                        стоимость</span><span>Заказать</span></button>
+            </form>
+
+            <div class="form-result">
+                <p class="remark">Отправляя форму, вы соглашаетесь с <a href="#"> &nbsp;политикой&nbsp; </a>
+                    обработки и
+                    использования
+                    персональных
+                    данных</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Окно навигации хедера -->
+        <nav class="header-nav center">
+    <div class="header-nav__container">
+        <ul>
+            <li class="main-page"><a href="main.html">Заказать работу</a></li>
+            <li class="china_lang-page"><a href="china_lang.html">来自中国的学生</a></li>
+            <li class="works_base-page"><a href="works_base.html">База бесплатных работ</a></li>
+            <li class="advantages-page"><a href="advantages.html">Наши преимущества</a></li>
+            <li class="pub_contract-page"><a href="pub_contract.html">Публичный договор</a></li>
+            <li class="payments-page"><a href="payments.html">Способы оплаты</a></li>
+            <li class="contacts-page"><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
+
+        <section class="pub-contract center">
+            <div class="pub-contract__container">
+
+                <h1 class="page-title">Публичный договор</h1>
+                <div class="line"></div>
+
+                <div class="subtitle">ПУБЛИЧНЫЙ ДОГОВОР ОКАЗАНИЯ УСЛУГ
+                    (ПУБЛИЧНАЯ ОФЕРТА)</div>
+
+                <p class="text">Настоящий Публичныйдоговор (далее по тексту «Договор») регулирует порядок
+                    оказанияконсультационно-образовательных
+                    услуг,а также определяет взаимные права, обязанности и взаимоотношения между Индивидуальным
+                    предпринимателем Масленковой
+                    Еленой Владимировной (Свидетельство о государственной регистрации №193800133), именуемым в
+                    дальнейшем «Исполнитель», с
+                    одной стороны, и Заказчиком услуг, именуемым в дальнейшем «Заказчик», принявшим (акцептовавшим)
+                    публичное предложение
+                    (оферту) о заключении настоящего Договора, с другой стороны.</p>
+
+                <div class="subtitle">1. ПРЕДМЕТ ДОГОВОРА</div>
+
+                <p class="text">1.1.   Исполнитель обязуется по поручению Заказчика оказать образовательные и
+                    секретарские услуги (далее по тексту
+                    «Услуги»), а Заказчик обязуется принять и оплатить оказанные Исполнителем Услуги в порядке и на
+                    условиях, определенных
+                    настоящим Договором.</p>
+                <p class="text">1.2.  Перечень Услуг включает в себя:
+                    -  консультации по формированию структуры и содержания письменной работы (далее по тексту «Работа»);
+                    -  подбор необходимой для выполнения Работы литературы, аналитических и статистических материалов по
+                    изучаемой
+                    проблематике;
+                    -  обучение навыкамработы с первичной информацией;
+                    -  обучение (при необходимости) навыкамобработки и интерпретации статистической информации,
+                    обеспечения сопоставимости
+                    данных в Работе с использованием конкретных практических примеров;
+                    -  консультация по оформлению Работыв соответствии с требованиями стандартов;
+                    -  компьютерный набор текстовых материалов Заказчика.</p>
+                <p class="text">1.3.   Перечень Услуг, которыедолжны быть оказаныв рамках настоящего Договора, а
+                    такжеиные существенные условияДоговора
+                    определяются по соглашению сторон в Заявке, подтверждающей волеизъявление Заказчика на заключение
+                    настоящего Договора.</p>
+
+                <div class="subtitle">2.  ПОРЯДОК ЗАКЛЮЧЕНИЯ ДОГОВОРА</div>
+                <p class="text">2.1.  Настоящий Договорявляется публичным договором(ст. 396 Гражданского Кодекса
+                    Республики Беларусь), в соответствии с
+                    которым Исполнитель принимает на себя обязательство по оказанию Услуг в отношении неопределенного
+                    круга лиц
+                    (Заказчиков), обратившихся за указанными Услугами.</p>
+                <p class="text">2.2.   Публикация (размещение) текста настоящего Договора на сайте по следующему адресу:
+                    https://kurator.by является
+                    публичным предложением (офертой) Исполнителя, адресованным неопределенному кругу лиц заключить
+                    настоящий Договор (п. 2.
+                    ст. 407 Гражданского Кодекса Республики Беларусь).</p>
+                <p class="text">2.3.  Заключение настоящего Договора производится путем присоединения Заказчика к
+                    настоящему Договору, т.е. посредством
+                    принятия (акцепта) Заказчиком условий настоящего Договора в целом,без каких-либо условий,изъятий и
+                    оговорок(ст. 398
+                    Гражданского Кодекса Республики Беларусь).</p>
+                <p class="text">2.4.  Фактом принятия(акцепта) Заказчиком условийнастоящего Договора являетсяоплата
+                    Заказчиком заказанных им Услуг в
+                    порядке и на условиях, определенных настоящим Договором (п. 3 ст. 408 Гражданского Кодекса
+                    Республики Беларусь).</p>
+                <p class="text">2.5.   Настоящий Договор, при условии соблюдения порядка его акцепта, считается
+                    заключенным в простой письменной форме
+                    (п. 2, п. 3 ст. 404 и п. 3 ст. 408 Гражданского Кодекса Республики Беларусь).</p>
+
+
+                <div class="subtitle">3. ПРАВА И ОБЯЗАННОСТИ ИСПОЛНИТЕЛЯ</div>
+                <p class="text">3.1.  Исполнитель обязан:</p>
+                <p class="text">3.1.1.  Оказать Заказчику Услугив объеме и в сроки,согласованные сторонами настоящего
+                    Договора (далее по тексту
+                    «Стороны»).</p>
+                <p class="text">3.1.2.  Оказывать Заказчику консультации в рабочее время (за исключением выходных дней и
+                    официальных государственных
+                    праздников) по телефону и/или электронной почте по вопросам, возникающим у Заказчика в связи с
+                    оказанием ему Услуг.</p>
+                <p class="text">3.1.3.   Обеспечивать конфиденциальность информации, предоставленной Заказчиком, за
+                    исключением случаев, когда
+                    предоставление доступа к такой информации для третьих лиц является необходимым условием оказания
+                    Услуг, либо является
+                    обязательным в силу требований законодательства Республики Беларусь.</p>
+                <p class="text">3.1.4.   Вносить за свой счет необходимые коррективы в подготовленные Исполнителем
+                    материалы при условии, если не
+                    изменились первоначальные требования, обозначенные Заказчиком при оформлении заказа. В противном
+                    случае, Исполнитель
+                    оставляет за собой право отказать в корректировке либо выполнить их на платной основе. Сроки
+                    внесения корректив не могут
+                    составлять менее 3-х и более 10-ти рабочих дней. В случае необходимости внесения корректив в более
+                    короткий срок,
+                    Исполнитель оставляет за собой право выполнить их на платной основе.Срок гарантии на оказанные
+                    услугисоставляет 30 дней
+                    с моментаокончательного расчета за услуги, по истечении указанного срока удовлетворение претензий
+                    осуществляются на
+                    платной основе по согласованию сторон.</p>
+                <p class="text">3.1.5.  Предоставить Заказчику подготовленные материалы в электронном виде.</p>
+                <p class="text">3.1.6.  В случае необходимости Исполнитель вправе продлить срок оказания услуги в
+                    одностороннем порядке до 10
+                    календарных дней без письменного уведомления Заказчика.</p>
+                <p class="text">3.1.7.     Осуществить иные действия,необходимые для исполнения настоящего Договора,
+                    предусмотренные законодательством,
+                    настоящим Договором и дополнениями к нему.</p>
+                <p class="text">3.2.   Исполнитель вправе привлекать третьих лиц для исполнения своих обязательств по
+                    настоящему Договору,а также
+                    использовать услуги третьих лиц, обеспечивающих возможность предоставления Услуг, предусмотренных
+                    настоящим Договором.</p>
+
+                <div class="subtitle">4. ОБЯЗАННОСТИ И ПРАВА ЗАКАЗЧИКА</div>
+                <p class="text">4.1.  Заказчик обязан:</p>
+                <p class="text">4.1.1.    В момент оформления Заявки полно и четко сформулировать требования, а также
+                    предоставить иную исчерпывающую
+                    информацию, необходимую Исполнителю для оказания Услуг. Необходимые Исполнителю документы и
+                    материалы представляются
+                    Заказчиком только в электронном виде.</p>
+                <p class="text">4.1.2.  Произвести в пользу Исполнителя своевременную оплату за оказываемые Услуги.</p>
+                <p class="text">4.1.3.  Изучить представленные Исполнителем материалы на предметих соответствия
+                    требованиям, указанным в Заявке.</p>
+                <p class="text">4.1.4.   На основании предоставленных Исполнителем в процессе оказания Услуг
+                    практических материалов, полученной
+                    информации и знаний подготовить Работу самостоятельно с учетом требований учебного плана своего
+                    учебного заведения.
+                    Заключая настоящий договор, Заказчик понимает, что предоставленный Исполнителем материал может быть
+                    использован
+                    исключительно в качестве вспомогательного материала при самостоятельной подготовке учебных
+                    письменных работ.</p>
+                <p class="text">4.1.5.    Осуществить все иные действия, необходимые для исполнения настоящего Договора,
+                    предусмотренные
+                    законодательством, настоящим Договором и дополнениями к нему.</p>
+
+                <div class="subtitle">5. СТОИМОСТЬ УСЛУГ И ПОРЯДОК РАСЧЕТОВ</div>
+                <p class="text">5.1.   Стоимость Услуг, оказываемых в рамках настоящего Договора, определяется исходя из
+                    их объема, характера и
+                    трудоемкости, согласно утвержденному Исполнителем прейскуранту цен, действующему непосредственно в
+                    момент выставления
+                    требования об оплате заказанных Услуг. Размер платы за оказываемые услуги фиксируется в Заявке.</p>
+                <p class="text">5.2.  В отдельных случаяхстоимость Услуг может повышаться в зависимости от их
+                    трудоемкости по согласованию Сторон.</p>
+                <p class="text">5.3.  Порядок расчетов:</p>
+                <p class="text">5.3.1.   Исполнитель вправе потребовать внесение Заказчиком предоплаты за оказываемые
+                    услуги, размер предоплаты
+                    определяется Исполнителем.</p>
+                <p class="text">5.3.2.  Оставшаяся сумма вносится в момент передачи Исполнителем Заказчику результатов
+                    оказанной услуги.</p>
+                <p class="text">5.3.3.  Оплата услуг производится путем перечисления денежных средств на счет
+                    Исполнителя по реквизитам, указанным в
+                    разделе 10 настоящего Договора.</p>
+                <p class="text">5.4.    Возврат Исполнителем денежных средств Заказчику за ненадлежащее исполнение
+                    результатов оказанных услуг возможен
+                    на основании предъявления Заказчиком официального документа, подтверждающего действительность
+                    ненадлежащего исполнения.</p>
+
+                <div class="subtitle">6.  ПОРЯДОК ВЫПОЛНЕНИЯ И СДАЧИ-ПРИЕМКИ УСЛУГ</div>
+                <p class="text">6.1.  Исполнитель оказывает Услуги в строгом соответствии с требованиями, указанными
+                    Заказчиком в момент
+                    оформленияЗаявки.</p>
+                <p class="text">6.2.  При отсутствии у Заказчикакритериев и требований к заказываемым
+                    Услугам,зафиксированных в Заявке,Исполнитель имеет
+                    право оказывать Услуги по своему усмотрению.</p>
+                <p class="text">6.3.  Фактом, подтверждающим оказание Исполнителем Услуг Заказчику, являетсяотметка в
+                    Заявкес фиксацией даты оказания
+                    Услуг, а также подписи Сторон об отсутствии претензий друг к другу.</p>
+                <p class="text">6.4.   При условии 100%-ной оплаты оказываемых Услуг, подготовленные Исполнителем
+                    материалы могут быть переданы
+                    Заказчику посредством электронной почты. В таком случае Услуги считаются принятыми, если в течение
+                    3-х календарных дней
+                    с момента их отправки от Заказчика не поступит претензий по их качеству.</p>
+                <p class="text">6.5.  По соглашению сторон допускается поэтапное оказание Услуг. В таком
+                    случаеЗаказчиком производится предоплата в
+                    размере 100% за отдельно выполняемый объем Услуг.</p>
+                <p class="text">6.6.   В случае прекращения услуги по инициативе Заказчика, последний незамедлительно
+                    уведомляет Исполнителя о причинах
+                    и сроке прекращения действия Договора и оплачивает Исполнителю объем фактически оказанных Услуг (по
+                    предъявлении
+                    последним результатов оказанной Услуги).</p>
+                <p class="text">6.7.   В случае прекращения услуги по инициативе Исполнителя, последний уведомляет об
+                    этом Заказчика и возвращает ему
+                    сумму внесенной предоплаты.</p>
+                <p class="text">6.8.    При отказе принять уже выполненный результат оказанных Услуг по основаниям, не
+                    урегулированным настоящим
+                    Договором, Заказчик берет на себя обязанность оплатить оказанные ему Услуги в полном объеме.</p>
+
+                <div class="subtitle">7.  ОТВЕТСТВЕННОСТЬ СТОРОН И ПРОЧИЕ УСЛОВИЯ</div>
+                <p class="text">7.1.     За неисполнение или ненадлежащее исполнение обязательств по настоящему договору
+                    Исполнитель и Заказчик несут
+                    ответственность в соответствии с действующим законодательством.</p>
+                <p class="text">7.2.  Исполнитель не несет ответственность за сохранность представленных Заказчиком
+                    материалов.</p>
+                <p class="text">7.3.  Исполнитель не отвечаетпо обязательствам Заказчика в рамках учебного процессав
+                    конкретном учебном заведении.</p>
+                <p class="text">7.4.   Стороны освобождаются от ответственности за частичное или полное неисполнение
+                    своих обязательств по настоящему
+                    Договору, если это явилось следствием действия обстоятельств непреодолимой силы (форс-мажора),
+                    возникших после
+                    заключения настоящего Договора в результате событий чрезвычайного характера, которые Стороны не
+                    могли ни предвидеть, ни
+                    предотвратить разумными мерами.</p>
+                <p class="text">7.5.    Права на использование результатов оказанных Услуг по настоящему Договору в
+                    любой форме принадлежат Исполнителю
+                    и Заказчику в равной степени, передача результатов оказанных Услуг третьей стороне может быть
+                    осуществлена Сторонами без
+                    согласования между ними.</p>
+                <p class="text">7.6.   В случае возникновения разногласий, предоставление Услуг по Договору
+                    приостанавливается до их полного
+                    урегулирования. Все неурегулированные разногласия по вопросам исполнения Договора разрешаются с
+                    учетом положений
+                    настоящего Договора, переписки сторон и в соответствии с действующим законодательством Республики
+                    Беларусь. Подсудность
+                    по настоящему договору устанавливается договорная – в суде г. Минска.</p>
+
+                <div class="subtitle">8. ПОРЯДОК ВНЕСЕНИЯ ИЗМЕНЕНИЙ И ДОПОЛНЕНИЙ В ДОГОВОР</div>
+                <p class="text">8.1.  Изменения и/или дополнения в настоящий Договорвносятся в одностороннем порядке по
+                    решениюИсполнителя.</p>
+                <p class="text">8.2.  Изменения и/или дополнения, вносимые Исполнителем в настоящий Договор по
+                    собственной инициативе, вступают в силу
+                    не ранее, чем через 5 календарных дней после их утверждения.</p>
+                <p class="text">8.3.   Изменения и/или дополнения, вносимые Исполнителем в настоящий Договор в связи с
+                    изменением законодательства,
+                    вступают в силу одновременно с вступлением в силу изменений в данных законодательных актах.</p>
+                <p class="text">8.4.  Текст изменений и/или дополнений настоящего Договора, либо его новая
+                    редакциядоводится Исполнителем до всеобщего
+                    сведения посредством размещения (опубликования) соответствующей информации на официальном сайте
+                    Исполнителя по
+                    следующему адресу: https://kurator.by.</p>
+                <p class="text">8.5.  Размещение (опубликование) текстов изменений и/или дополнений настоящего Договора,
+                    либо его новой редакциина
+                    официальном сайте Исполнителя по следующему адресу: https://kurator.by производится Исполнителем в
+                    срок не позднее, чем
+                    за пять календарных дней до даты вступления в силу вносимых изменений и/или дополнений.</p>
+                <p class="text">8.6.   В случае несогласия с внесенными изменениями и/или дополнениями, Заказчик имеет
+                    право расторгнуть настоящий
+                    Договор, при этом Заказчик обязуется оплатить Исполнителю фактически выполненный объем оказанных
+                    Услуг.</p>
+                <p class="text">8.7.   Уведомлением о расторжении настоящего Договора также признается любое письменное
+                    уведомление Заказчика,
+                    составленное на бумажном носителе, о несогласии с внесенными изменениями и/или дополнениями, либо о
+                    неприсоединении к
+                    новой редакции настоящего Договора или об отказе соблюдать его условия.</p>
+                <p class="text">8.8.    Стороны безоговорочно соглашаются с тем, что молчание (отсутствие письменных
+                    уведомлений о расторжении
+                    настоящего Договора, либо о несогласии с отдельными положениями настоящего Договора, в том числе с
+                    изменением
+                    прейскуранта цен на Услуги) признается согласием и присоединением Заказчика к новой редакции
+                    настоящего Договора (п. 3
+                    ст. 159 Гражданского Кодекса Республики Беларусь).</p>
+
+                <div class="subtitle">9.   РЕКВИЗИТЫ ИСПОЛНИТЕЛЯ</div>
+                <p class="text">9.1.     Индивидуальный предприниматель Масленкова Елена Владимировна</p>
+                <p class="text">220024, г. Минск, ул. Асаналиева, 9, к.135.</p>
+                <p class="text">BY46BPSB30133446810129330000</p>
+                <p class="text">в ОАО «Сбер Банк», г. Минск, код BPSBBY2X</p>
+                <p class="text">УНП 193800133</p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer center">
+    <div class="footer__container">
+        <div class="footer__grid">
+
+            <div class="first__column">
+                <div class="logo">
+                    <a href="main.html"><img src="images/main/footer/logo_footer.svg" alt="Footer Logo"></a>
+                </div>
+
+                <div class="socials">
+    <ul>
+        <li><a href="#"><img src="images/main/header/telegram.svg" alt="Telegram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/viber.svg" alt="Viber Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/insta.svg" alt="Instagram Icon"></a></li>
+        <li><a href="#"><img src="images/main/header/vk.svg" alt="VK Icon"></a></li>
+    </ul>
+</div>
+
+                <a href="#" class="phone">
+                    <img src="images/main/footer/phone.svg" alt="Phone Icon">
+                    <span>+375 (33) 994 32 62</span>
+                </a>
+
+                <a href="#" class="mail">
+                    <img src="images/main/footer/mail_footer.svg" alt="Phone Icon">
+                    <span>kuratorminsk@mail.ru</span>
+                </a>
+
+                <div class="ie">
+                    <span>ИП Масленкова Е.В.</span>
+                </div>
+
+                <div class="address">
+                    <span>220024, г.Минск, ул. Асаналиева, 9</span>
+                </div>
+
+                <div class="unp">
+                    <span>УНП 193800133</span>
+                </div>
+
+                <a href="#" class="policy">
+                    <span>Политика конфиденциальности</span>
+                </a>
+            </div>
+
+            <div class="second__column">
+                <ul>
+                    <li><span>Навигация</span></li>
+                    <li><a href="#">Заказать работу</a></li>
+                    <li><a href="#">来自中国的学生</a></li>
+                    <li><a href="#">Наши преимущества</a></li>
+                    <li><a href="#">Публичный договор</a></li>
+                    <li><a href="#">Способы оплаты</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="third__column">
+                <ul>
+                    <li><span>Виды работ</span></li>
+                    <li><a href="#">Дипломная работа</a></li>
+                    <li><a href="#">Курсовая работа</a></li>
+                    <li><a href="#">Отчет по практике</a></li>
+                    <li><a href="#">Диссертация</a></li>
+                    <li><a href="#">Эссе</a></li>
+                    <li class="list-tail"><a href="#">Доклад</a></li>
+                    <li class="list-tail"><a href="#">Реферат</a></li>
+                    <li class="list-tail"><a href="#">Презентация</a></li>
+                    <li class="list-tail"><a href="#">Оформление по ГОСТу</a></li>
+                    <li class="list-tail"><a href="#">Статья</a></li>
+                </ul>
+            </div>
+
+            <div class="fourth__column">
+                <ul>
+                    <li><span style="visibility: hidden;">Виды работ</span></li>
+                    <li><a href="#">Доклад</a></li>
+                    <li><a href="#">Реферат</a></li>
+                    <li><a href="#">Презентация</a></li>
+                    <li><a href="#">Оформление по ГОСТу</a></li>
+                    <li><a href="#">Статья</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__grid--bottom">
+            <a href="#" class="policy">Политика конфиденциальности</a>
+            <a>© 2024 kurator.by</a>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- <script type="module" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+</body>
+
+</html>
