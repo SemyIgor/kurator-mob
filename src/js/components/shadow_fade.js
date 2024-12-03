@@ -96,7 +96,7 @@ export default function shadowFade() {
         document.body.style.overflow = "";
     }
 
-    // Функция обработки выпадающего списка в форме
+    // Функция обработки выпадающего списка в форме (для ПК и мобильного)
     function formDropDownList() {
         // Находим элементы, содержащие выпадающие списки
         const findDropDownLabels =
@@ -104,49 +104,94 @@ export default function shadowFade() {
 
         if (findDropDownLabels.length > 0) {
             findDropDownLabels.forEach((label) => {
-                label.addEventListener("touchstart", (event) => {
-                    label.classList.add("hover");
-                });
-                label.addEventListener("touchend", (event) => {
-                    label.classList.remove("hover");
-                });
                 // Находим поле input в каждом найденном элементе
                 const formDropDownListInput = label.querySelector("input");
 
                 // Находим выпадающий список в каждом элементе
                 const dropDownList = label.querySelector(".works-items");
 
-                // Находим элементы списка и подключаем слушатель к каждому
+                // Находим все элементы выпадающего списка
                 const dropDownListItems =
                     dropDownList.querySelectorAll(".works-item");
 
-                dropDownListItems.forEach((item) => {
-                    item.addEventListener("click", (event) => {
-                        formDropDownListInput.value = event.target.textContent;
-
-                        resetDropList(label);
-                    });
-                });
-
-                dropDownListItems.forEach((item) => {
-                    item.addEventListener("touchstart", (event) => {
-                        console.log("touchstart");
-                        item.classList.add("hover");
-                    });
-                    item.addEventListener("touchmove", (event) => {
-                        item.classList.add("hover");
-                        console.log("event: ", event.target);
-                        console.log("item: ", item);
-                    });
-                    item.addEventListener("touchend", (event) => {
-                        item.classList.remove("hover");
-                        console.log("event: ", event.target);
-                    });
-                });
+                // Определяем, мобильный ли это и обрабатываем соответственно
+                if (isMobile()) {
+                    formDropDownListMob(
+                        formDropDownListInput,
+                        dropDownListItems,
+                        label
+                    );
+                } else {
+                    formDropDownListPC(
+                        formDropDownListInput,
+                        dropDownListItems,
+                        label
+                    );
+                }
             });
         }
     }
 
+    // Функция определения мобильный ли это
+    function isMobile() {
+        // Проверяем - это ПК или мобильное устройство
+        if (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                navigator.userAgent
+            )
+        ) {
+            // Мобильное устройство
+            return true;
+        } else {
+            // ПК
+            return false;
+        }
+    }
+
+    // Функция обработки выпадающего списка в форме для мобильных
+    function formDropDownListMob(
+        formDropDownListInput,
+        dropDownListItems,
+        label
+    ) {
+        label.addEventListener("click", (event) => {
+            // Открываем выпадающий список
+            label.classList.toggle("hover");
+
+            // Находим элементы списка и подключаем слушатель к каждому
+            dropDownListItems.forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    // Выбранное значение из списка - в input
+                    formDropDownListInput.value = event.target.textContent;
+                    // Закрываем выпадающий список
+                    label.classList.remove("hover");
+
+                    // Удаляем обработчики событий, чтобы избежать утечек памяти
+                    dropDownListItems.forEach((item) => {
+                        item.removeEventListener("click", handleItemClick);
+                    });
+                });
+            });
+        });
+    }
+
+    // Функция обработки выпадающего списка в форме для ПК
+    function formDropDownListPC(
+        formDropDownListInput,
+        dropDownListItems,
+        label
+    ) {
+        // Находим элементы списка и подключаем слушатель к каждому
+        dropDownListItems.forEach((item) => {
+            item.addEventListener("click", (event) => {
+                formDropDownListInput.value = event.target.textContent;
+
+                resetDropList(label);
+            });
+        });
+    }
+
+    // Функция кратковременного сброса выпадающего меню при выборе элемента
     function resetDropList(label) {
         const dropDownList = label.querySelector(".works-items");
         // Убираем список из DOM на 0.5сек
@@ -158,6 +203,7 @@ export default function shadowFade() {
         }, 500); // Имитация асинхронной работы
     }
 
+    // Функция восстановления готовности выпадающего меню к hover
     function restoreDropList(label) {
         const dropDownList = label.querySelector(".works-items");
         dropDownList.classList.remove("display--none");
