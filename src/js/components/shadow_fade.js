@@ -175,6 +175,8 @@ export default function shadowFade() {
         });
     }
 
+    function handleItemClick() {}
+
     // Функция обработки выпадающего списка в форме для ПК
     function formDropDownListPC(
         formDropDownListInput,
